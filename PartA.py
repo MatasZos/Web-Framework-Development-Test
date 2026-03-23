@@ -113,7 +113,11 @@ if __name__ == "__main__":
     taylor.add_song(youbelongsong)
     taylor.add_song(spaceblanksong)
     taylor.add_song(stylesong)
-    
+    fearlessalbum.songs.append(lovestorysong)
+    fearlessalbum.songs.append(youbelongsong)
+
+    album1989.songs.append(spaceblanksong)
+    album1989.songs.append(stylesong)
     taylor.display_info()
     fearlessalbum.display_info()
     album1989.display_info()
