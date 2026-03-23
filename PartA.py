@@ -27,4 +27,14 @@ class Artist:
     
     def add_song(self,song):
         self.songs.append(song)
+        
+
+
+
+class Album:
+    def __init__(self, title, artist_name, year):
+        self.title = title
+        self.artist_name = artist_name
+        self.year = year
+        self.songs = [] 
 
