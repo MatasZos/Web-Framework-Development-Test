@@ -37,4 +37,10 @@ class Album:
         self.artist_name = artist_name
         self.year = year
         self.songs = [] 
+        
+    def add_song(self,title,year):
+        new_song=Song(title,self.artist_name,year)
+        self.songs.append(new_song)
+        return new_song
+    
 
