@@ -113,4 +113,20 @@ if __name__ == "__main__":
     taylor.add_song(youbelongsong)
     taylor.add_song(spaceblanksong)
     taylor.add_song(stylesong)
+    
+    taylor.display_info()
+    fearlessalbum.display_info()
+    album1989.display_info()
+    lovestorysong.display_info()
+    
+    playlist = Playlist("Taylor Swift Albums and Songs")
+    for s in fearlessalbum.songs:
+        playlist.add_song(s)
+    for s in album1989.songs:
+        playlist.add_song(s)
+        
+    print("Songs in playlist:")
+    playlist.print_all_songs()
+
+
 
