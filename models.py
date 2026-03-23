@@ -48,3 +48,11 @@ class Mechanic(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
     
+class ServiceTicket(models.Model):
+    service_ticket_number = models.CharField(max_length=50)
+    date_received = models.DateField()
+    comments = models.TextField()
+    date_returned_to_customer = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return f"Service Ticket {self.service_ticket_number}"
