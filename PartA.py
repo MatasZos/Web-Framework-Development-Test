@@ -43,4 +43,6 @@ class Album:
         self.songs.append(new_song)
         return new_song
     
+class Song:
+    
 
