@@ -83,7 +83,13 @@ class Playlist:
             for i, song in enumerate(self.songs, start=1):
                 print(f"{i}.{song.title}-{song.artist_name}({song.year})")
         print("_" * 40)
-        
     
     def shuffle_playlist(self):
         random.shuffle(self.songs)
+
+
+
+    def sort_playlist(self, order="ASC"):
+        self.songs.sort(key=lambda s: s.title)
+        if order == "DES":
+            self.songs.reverse()
