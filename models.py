@@ -31,3 +31,20 @@ class Salesperson(model.Model):
     
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+        
+class Parts(models.Model):
+    part_number = models.CharField(max_length=100)
+    description = models.CharField(max_length=200)
+    purchase_price = models.DecimalField(max_digits=10, decimal_places=2)
+    retail_price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f"{self.part_number} - {self.description}"
+    
+class Mechanic(models.Model):
+    last_name = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+    
