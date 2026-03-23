@@ -46,3 +46,27 @@ class TestMusicClasses(unittest.TestCase):
         a = Song("Love Story", "Taylor Swift", 2008)
         b = Song("Love Story", "Taylor Swift", 2008)
         self.assertIsNot(a, b)
+        
+    
+    
+    """unit test for if all methods work"""
+    
+    def test_add_song_to_album(self):
+        self.album.songs.append(self.song)
+        self.assertIn(self.song, self.album.songs)
+
+    def test_add_song_to_artist(self):
+        self.artist.add_song(self.song)
+        self.assertIn(self.song, self.artist.songs)
+
+    def test_add_album_to_artist(self):
+        self.artist.add_album(self.album)
+        self.assertIn(self.album, self.artist.albums)
+
+    def test_add_song_to_playlist(self):
+        self.playlist.add_song(self.song)
+        self.assertIn(self.song, self.playlist.songs)
+        
+    """unit test for if sorting annd shuffle methoid works"""
+    
+    
