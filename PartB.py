@@ -20,3 +20,17 @@ class TestMusicClasses(unittest.TestCase):
 
     def test_playlist_instance(self):
         self.assertIsInstance(self.playlist, Playlist)
+
+    """unit test for if an object is not an instance of a class"""
+    
+    def testartistnotsong(self):
+        self.assertNotIsInstance(self.artist, Song)
+
+    def testalbumnotplaylist(self):
+        self.assertNotIsInstance(self.album, Playlist)
+
+    def testsongnotartist(self):
+        self.assertNotIsInstance(self.song, Artist)
+
+    def testplaylistnotalbum(self):
+        self.assertNotIsInstance(self.playlist, Album)
