@@ -34,3 +34,15 @@ class TestMusicClasses(unittest.TestCase):
 
     def testplaylistnotalbum(self):
         self.assertNotIsInstance(self.playlist, Album)
+
+    """unit test for if 2 obhjects are idential, 1 for identical, 1 for not"""
+    
+    def test_identical_objects(self):
+        a = self.song
+        b = self.song
+        self.assertIs(a, b)
+
+    def test_similar_objects(self):
+        a = Song("Love Story", "Taylor Swift", 2008)
+        b = Song("Love Story", "Taylor Swift", 2008)
+        self.assertIsNot(a, b)
