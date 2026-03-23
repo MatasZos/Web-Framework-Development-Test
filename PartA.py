@@ -73,6 +73,9 @@ class Playlist:
         self.title = title
         self.songs = [] 
         
+    def add_song(self, song):
+        self.songs.append(song)
+        
     
     def print_all_songs(self):
         print("Name of Playlisy:", self.title)
