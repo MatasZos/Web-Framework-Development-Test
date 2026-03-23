@@ -68,3 +68,7 @@ class Song:
 
 
 
+class Playlist:
+    def __init__(self, title):
+        self.title = title
+        self.songs = [] 
