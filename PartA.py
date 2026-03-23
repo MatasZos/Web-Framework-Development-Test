@@ -93,3 +93,11 @@ class Playlist:
         self.songs.sort(key=lambda s: s.title)
         if order == "DES":
             self.songs.reverse()
+            
+            
+if __name__ == "__main__":
+    taylor = Artist("Taylor Swift", "1989-12-13", "USA")
+    
+    fearlessalbum = Album("Fearless", taylor.name, 2008)
+    album1989 = Album("1989", taylor.name, 2014)
+
