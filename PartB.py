@@ -69,4 +69,37 @@ class TestMusicClasses(unittest.TestCase):
         
     """unit test for if sorting annd shuffle methoid works"""
     
-    
+    def test_sort_playlist_ascending(self):
+        s1 = Song("B", "Taylor Swift", 2008)
+        s2 = Song("A", "Taylor Swift", 2008)
+        self.playlist.add_song(s1)
+        self.playlist.add_song(s2)
+
+        self.playlist.sort_playlist("ASC")
+        self.assertEqual(self.playlist.songs[0].title, "A")
+
+    def test_sort_playlist_descending(self):
+        s1 = Song("A", "Taylor Swift", 2008)
+        s2 = Song("B", "Taylor Swift", 2008)
+        self.playlist.add_song(s1)
+        self.playlist.add_song(s2)
+
+        self.playlist.sort_playlist("DES")
+        self.assertEqual(self.playlist.songs[0].title, "B")
+        
+    def test_shuffle_playlist(self):
+        s1 = Song("A", "Taylor Swift", 2008)
+        s2 = Song("B", "Taylor Swift", 2008)
+        s3 = Song("C", "Taylor Swift", 2008)
+
+        self.playlist.add_song(s1)
+        self.playlist.add_song(s2)
+        self.playlist.add_song(s3)
+
+        before = self.playlist.songs.copy()
+        self.playlist.shuffle_playlist()
+        after = self.playlist.songs
+        self.assertNotEqual(before, after)
+
+if __name__ == "__main__":
+    unittest.main()
