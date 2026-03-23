@@ -83,3 +83,7 @@ class Playlist:
             for i, song in enumerate(self.songs, start=1):
                 print(f"{i}.{song.title}-{song.artist_name}({song.year})")
         print("_" * 40)
+        
+    
+    def shuffle_playlist(self):
+        random.shuffle(self.songs)
