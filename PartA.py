@@ -23,7 +23,7 @@ class Artist:
         print("-"*40)
     
     def add_album(self,album):
-        self.albums.append(self.album)
+        self.albums.append(album)
     
     def add_song(self,song):
         self.songs.append(song)
