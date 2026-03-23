@@ -43,6 +43,28 @@ class Album:
         self.songs.append(new_song)
         return new_song
     
-class Song:
     
+    def display_info(self):
+        print("Title of album:", self.title)
+        print("Artist that made it:", self.artist_name)
+        print("Year it was released:", self.year)
+        print("Songs in the album:")
+        for song in self.songs:
+            print("  -", song.title, "(", song.year, ")")
+        print("-" * 40)
+
+    
+class Song:
+    def __init__(self, title,artist_name, year):
+        self.title = title
+        self.artist_name = artist_name
+        self.year = year
+        
+    def display_info(self):
+        print("Title of song:", self.title)
+        print("Artist that made it:", self.artist_name)
+        print("Year it was released:", self.year)
+        print("-" * 40)
+
+
 
