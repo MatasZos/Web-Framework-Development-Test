@@ -56,3 +56,17 @@ class ServiceTicket(models.Model):
 
     def __str__(self):
         return f"Service Ticket {self.service_ticket_number}"
+    
+class Service(models.Model):
+    service_name = models.CharField(max_length=100)
+    hourly_rate = models.DecimalField(max_digits=10, decimal_places=2)
+    
+    def __str__(self):
+        return f"{self.service_name} {self.hourly_rate}"
+    
+class PartsUsed(models.Model):
+    number_used = models.IntegerField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f"{self.number_used} × {self.part.part_number}"
