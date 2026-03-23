@@ -128,5 +128,19 @@ if __name__ == "__main__":
     print("Songs in playlist:")
     playlist.print_all_songs()
 
+    playlist.sort_playlist(order="ASC")
+    print("Playlist sorted in ascending order:")
+    playlist.print_all_songs()
+    
+    
+    playlist.sort_playlist(order="DES")
+    print("Playlist sorted in descending order")
+    playlist.print_all_songs()
+
+
+
+    playlist.shuffle_playlist()
+    print("Playlist after shuffling:")
+    playlist.print_all_songs()
 
 
