@@ -70,3 +70,12 @@ class PartsUsed(models.Model):
 
     def __str__(self):
         return f"{self.number_used} × {self.part.part_number}"
+    
+class ServiceMechanic(models.Model):
+    
+    hours = models.DecimalField(max_digits=5, decimal_places=2)
+    comment = models.TextField()
+    rate = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f"Mechanic {self.mechanic} on Service {self.service}"
