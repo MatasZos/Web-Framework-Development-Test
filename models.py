@@ -79,3 +79,11 @@ class ServiceMechanic(models.Model):
 
     def __str__(self):
         return f"Mechanic {self.mechanic} on Service {self.service}"
+    
+class Invoice(models.Model):
+
+    invoice_number = models.CharField(max_length=50)
+    date = models.DateField()
+
+    def __str__(self):
+        return f"Invoice {self.invoice_number}"
