@@ -100,4 +100,17 @@ if __name__ == "__main__":
     
     fearlessalbum = Album("Fearless", taylor.name, 2008)
     album1989 = Album("1989", taylor.name, 2014)
+    
+    lovestorysong = Song("Love Story", taylor.name, 2008)
+    youbelongsong = Song("You Belong With Me", taylor.name, 2008)
+    spaceblanksong = Song("Blank Space", taylor.name, 2014)
+    stylesong = Song("Style", taylor.name, 2014)
+    
+    taylor.add_album(fearlessalbum)
+    taylor.add_album(album1989)
+
+    taylor.add_song(lovestorysong)
+    taylor.add_song(youbelongsong)
+    taylor.add_song(spaceblanksong)
+    taylor.add_song(stylesong)
 
