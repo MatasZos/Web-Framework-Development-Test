@@ -51,7 +51,7 @@ class Album:
         print("Songs in the album:")
         for song in self.songs:
             print("  -", song.title, "(", song.year, ")")
-        print("-" * 40)
+        print("_" * 40)
 
     
 class Song:
@@ -64,7 +64,7 @@ class Song:
         print("Title of song:", self.title)
         print("Artist that made it:", self.artist_name)
         print("Year it was released:", self.year)
-        print("-" * 40)
+        print("_" * 40)
 
 
 
@@ -72,3 +72,14 @@ class Playlist:
     def __init__(self, title):
         self.title = title
         self.songs = [] 
+        
+    
+    def print_all_songs(self):
+        print("Name of Playlisy:", self.title)
+        if not self.songs:
+            print("No songs found")
+        else:
+            """index list"""
+            for i, song in enumerate(self.songs, start=1):
+                print(f"{i}.{song.title}-{song.artist_name}({song.year})")
+        print("_" * 40)
